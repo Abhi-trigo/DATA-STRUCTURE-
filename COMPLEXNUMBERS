@@ -1,0 +1,39 @@
+class complexs{
+private:
+    int real;
+    int imag;
+public :
+    complexs():real(0),imag(0){};
+    void input(){
+        cout<<" ENTER THE REAL NUMBER"<<"\n";
+        cin>> real;
+        cout<<"ENTER THE IMAGINARY NUMBER"<<"\n";
+        cin>>imag;
+        }
+    complexs operator - (complexs c1){
+        complexs temp;
+        temp.real= real-c1.real;
+        temp.imag= imag-c1.imag;
+        return temp;
+    }
+    int getreal(){
+        return real;
+    }
+    int getimag(){
+        return imag;
+    }
+
+};
+int main(){
+    complexs c1,c2,c3;
+    c1.input();
+    c2.input();
+    cout<<c1.getreal()<<"\n";
+    cout<<c1.getimag()<<"i"<<"\n";
+    cout<<c2.getreal()<<"\n";
+    cout<<c2.getimag()<<"i"<<"\n";
+    c3=c1-c2;
+    cout<<c3.getreal()<<"\n";
+    cout<<c3.getimag()<<"i"<<"\n";
+return 0;
+}
